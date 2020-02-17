@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratorio 1</title>
+	<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	li a:hover {
+	  background-color: red;
+	}
+		h1,h2{
+			text-align: center;
+		}
+		
+		footer{
+			background-color: #DADADA;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Laboratorio 1(Base de datos y Desarrollo de aplicaciones Web)</h1>	
+	</header>
+	<nav>
+		<ul>
+		<li><a href="#aficiones">Aficiones</a></li> 
+		<li><a href="#proyectos">Proyectos</a> </li>
+		<li><a href="#investigaciones">Investigacion</a></li> 
+		<li><a href="#preguntas">Preguntas</a></li>
+		<li><a href="#informacion">Informacion personal</a></li>
+		</ul>
+	</nav>
+	<article>
+	<h2><a name="aficiones"> Aficiones</a></h2>
+		<p>Me gusta mucho salir a correr, la comida, las series, y el box </p>
+
+		<hr>
+	</article>
+	<article>
+	<h2><a name="proyectos"> Proyectos</a></h2>
+		<p>Tengo una pagina de internet en el cual hago dropshipping, esta se llama:<a href="https://ofertaschinas.store/" name="ofertaschinas" class="">Ofertas Chinas </a></p>
+		<hr>
+
+	</article>
+
+	<article>
+	<h2><a name="investigaciones"> Investigacion</a></h2>
+		<p><u> URL(Uniform Resource Locator)</u>
+			<br>
+			Es una direccion de internet, cuando el navegador la encuentra muestra este recurso.
+		</p>
+		<p><u> MIME(Multipurpose Internet Mail Extensions)</u>
+			<br>
+			Es la manera standard de mandar contenido en internet a traves de la red, los tipos MIME espeficifican tipos de datos
+		</p>
+		<p><u>Métodos y códigos de errores HTTP</u>
+			<br>
+			Los codigos de estado  HTTP te indican si  se ha completado correctamente una solicitud HTTP especifica.
+			<br>
+			Los metodos permiten comunicar al servidor  lo que se quiere realizar con un resource bajo una URL
+		</p>
+
+		<p><u> HTML5</u>
+			<br>
+			Este es un lenguaje markup que se usa para estructurar y presentar el contenido para la web.
+		</p>
+
+		<p><u>JavaScript</u>
+			<br>
+			ES un lenguaje de programacion que te permite realizar actividad complejas en una pagina web
+			<br>
+			ejemplo: controlar archivos multimedia,crear imagenes animadas, etc
+
+		</p>
+		<p><u>php(Hypertext Preprocessor)</u>
+			<br>
+			Es un lenguaje de programacion que se utiliza para crear paginas web dinamica(esto quiere decir que procesa datos),este ser proceda en servidores,
+
+		</p>
+		<p><u>jsp(JavaServer Pages)</u>
+			<br>
+			Sirve para crear paginas web dinamica, muy parecido a php, pero este usa el lenguaje de programacion Java
+		</p>
+		<p><u>Ajax(Asynchronous JavaScript And XML)</u>
+			<br>
+			Conjunto de tecnicas de desarrollo web que permiten que las aplicaciones web funcionen de manera asincrona procesando cualquier solicitud en segundo plano
+			<br>
+			(asincrona:el cliente puede realizar varias peticiones al servidor sin necesidad de esperar por la respuesta de la primera)
+
+		</p>
+		  
+
+
+		<hr>
+		</article>
+		<article>
+		<h2><a name="preguntas"> Preguntas</a></h2>
+		<p><u>¿Cuál es la diferencia entre Internet y la World Wide Web?</u>
+			<br>
+			El <strong>internet</strong> es una red global conformado por un sistema de computadoras 
+			<br>
+			La <strong> Word Wide Web</strong>  es una recopilación de información a la que se accede a través de internet  
+
+		</p>
+		<p><u>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</u>		
+			<br>
+			<strong> Get</strong> : solicita una peticion de un recurso especifico 
+			<br>
+			<strong> Head:</strong> pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.
+			<br>
+			<strong>Post:</strong> se utiliza para enviar una identidad a un recurso especifico 
+			<br>
+			<strong>Put:</strong> reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+			<br>
+			<strong>Patch: </strong> es utilizado para aplicar modificaciones parciales a un recurso.
+			<br>
+			<strong>Delete :</strong> borra un recurso en específico.
+
+		</p>
+
+
+		<p><u>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</u>
+			<br>
+			<strong> Post,</strong> ya que esta enviando un recurso, este es tu usuario y tu contraseña
+		</p>
+		<p><u>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</u>
+			<br>
+			<strong>get </strong>ya que estas solicitando una peticion
+		</p>
+
+		<p><u>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</u>
+			<br>
+			Que la petición llegó correctamente, no obtuvo ningún error
+		</p>
+		<p><u>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</u>
+			<br>
+			Fue culpa del usuario si el usuario puso mal la dirección, también es nuestra culpa si pusimos mal el enlace
+		</p>
+
+
+		<p><u>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</u>
+			<br>
+			Si y no , esto depende, este error es del servidor, pero muchas veces es porque nosotros tuvimos un error de codificacion
+
+		</p>
+		<p><u>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</u>
+			<br>
+
+			Significa que  el uso de estos ya no es recomendados ya que estos atributos ya fueron sustituidos por otros, y también ya son obsoletos, por lo que ya no tendrán mas soporte
+			<br>
+
+			Algunos elementos son:
+			<br>
+
+			Tags:<br>
+			applet:Define applet<br> 
+			frame Define un frame<br>
+			font Define el tipo de letre, tamaño y color<br> 
+			u  Define el texto subrayado<br>
+
+			Los atributos de los tags tambien fueron modificados <br>
+			Atributos :<br>
+			Rev : removidos de link, a<br>
+			Target :  removidos de link <br>
+			Profile: removido de head<br>
+			Name : removido de img <br>
+
+
+		</p>
+		<p><u>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</u>
+			<br>
+			HTML5 tiene nuevos tags,separa la estructuro de contenido(css) y del comportamiento(javascript), se puede omitir el cierre de algunos elementos
+			<br>
+			HTML4: se conserva las hojas de estilo
+
+
+		</p>
+		<p><u> ¿Qué componentes de estructura y estilo tiene una tabla?</u>
+			<br>
+			<strong>Table:</strong>  el contenedor principal
+			<br>
+			<strong>Tr:</strong> representa las filas
+			<br>
+			<strong>Td:</strong> representa las celdas
+			<br>
+			De estilo se le puede cambiar el acho a las filas y celdas, la alineación del texto, los bordes, el relleno , el fondo
+
+
+		</p>
+		<p><u>¿Cuáles son los principales controles de una forma HTML5?</u>
+			<br>
+			<!doctype html> esto define que esta bajo el estándar html5
+			<br>
+			html: este representa la raíz del documento 
+			<br>
+			head:Representa una colección de metadatos acerca del documento, incluyendo enlaces a, o definiciones de
+			, scripts y hojas de estilo.
+			<br>
+			title:Define el título del documento
+			<br>
+			base:Define la URL base para las URLs relativas en la página.
+			<br>
+			link:Usada para enlazar JavaScript y CSS externos con el documento HTML actual.
+			<br>
+			meta:Define los metadatos que no pueden ser definidos usando otro elemento HTML.
+			<br>
+			style:Etiqueta de estilo usada para escribir CSS en línea
+
+
+
+
+
+
+
+
+		</p>
+		<p><u>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)</u>
+			<br>
+			476 de 555 y yo uso Google Chrome 
+		</p>
+		<p><u>¿Cuál es el ciclo de vida de los sistemas de información?</u>
+			<br>
+			Este tiene 7 fases
+			<br>
+			Fase de planificación  
+			<br>
+			Fase de análisis 
+			<br>
+			Fase de diseño 
+			<br>
+			Fase de desarrollo 
+			<br>
+			Fase de integración y periodo de pruebas 
+			<br>
+			Fase de implementación 
+
+
+		</p>
+		
+
+
+
+
+
+
+		</article>
+
+</body>
+
+<footer>
+	<hr>
+	<h2><a name="informacion"> Informacion personal</a></h2>
+	<p>
+		Jose Eduardo Cadena Bernal 
+		<br>
+		Matricula: A01704641
+		<br>
+		Correo: A01704641@itesm.mx
+		<br>
+		Utilice el Editor de <b><a href="https://www.sublimetext.com/3"> Sublime Text</a>
+		</b> 
+	</p>
+</footer>
+
+</html>
