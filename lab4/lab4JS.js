@@ -93,11 +93,16 @@ function contador(){
 } 
 function promedios(){
 
+//preguntar al profesor
+
 
 }
 
 function inverso(){
-  var cadena = prompt("Dame una cadena");
+  var cadena = prompt("Dame numeros");
+  while(isNaN(cadena)){
+    cadena = prompt("Dame numeros");
+  }
   var x = cadena.length;
   var cadenaInvertida = "";
 
@@ -109,8 +114,27 @@ function inverso(){
 }
 	
 function libre(){
+/*
+var miAuto = new Object();
+miAuto.marca = "Ford";
+miAuto.modelo = "Mustang";
+miAuto.año = 1969;
+*/
+
+
 
 
 
 	
 }
+
+
+
+/*
+
+function Auto(marca, modelo, annio) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.annio = annio;
+}
+*/
