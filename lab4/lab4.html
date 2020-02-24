@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Laboratorio 4</title>
+	<meta charset="UTF-8">
 </head>
 <body>
 
@@ -13,7 +14,32 @@
 	<button name="btn3" onclick="contador()">Contador</button>
 	<button name="btn4" onclick="promedios([[50, 50, 50, 50], [1, 2, 3, 4], [6, 47, 81, 10], [20, 20, 20, 20]])">Promedios</button>
 	<button name="btn5" onclick="inverso()">Inverso</button>
-	<button name="btn5" onclick="libre()">Laboratorio Libre</button>
+	<p>En este libre un doctor quiere saber el orden de los pacientes que llegan, por lo cual cada uno se tiene que registrar en un computadora, y asi cada quien sabra su turno y despues de quien les toca, asi tambien el doctor podra darse una idea de cuantas personas llegan al dia</p>
+
+	
+	<input type="text" id="nombre" placeholder="Ingresa tu Nombre">
+	<input type="text" id="edad" placeholder="Ingresa tu edad">
+	<input type="text" id="peso" placeholder="Ingresa tu peso">
+	<button name="btn6" onclick="libre()">Registrarte</button>
+	
+	<table id="tabla">
+		<thead>
+			
+			<tr>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Peso</th>
+			</tr>
+			
+		</thead>
+		
+	</table>
+	
+
+	<br>
+	<br>
+	<br>
+	
 	<p>¿Qué diferencias y semejanzas hay entre Java y JavaScript?
 		<br>
 		Java:lenguaje de programacion orientada a objetos,es un lenguaje compilado,se depura en dos fases,fuerte tipado,tiene ambito por bloque,tiene clausuras
@@ -36,6 +62,8 @@
 		<br>
 
 	</p>
+
+
 	<p>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
 		<br>
 		concat():Une dos o más arrays
@@ -52,13 +80,19 @@
 
 
 	</p>
+
+
 	<p>¿Cómo se declara una variable con alcance local dentro de una función?
 		let variable = 0; 
 	</p>
+
+
 	<p>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
 		<br>
 		Algunas veces los valores se confunden, por lo tanto los resultados no son los esperados
 	</p>
+
+
 	<p>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?
 		<br>
 		exec:Un método RegExp que ejecuta una búsqueda por una coincidencia en una cadena. Devuelve un array de información

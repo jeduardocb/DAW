@@ -38,6 +38,7 @@ function generarTabla(){
   
   tabla.setAttribute("border", "3");
 
+  console.log("capturado");
 
 }
 
@@ -59,6 +60,7 @@ function sumaNumeros(){
 
 
 	
+  console.log("capturado");
 
 }
 
@@ -140,22 +142,44 @@ function inverso(cadena = pedirNumero()){
   document.write(cadenaInvertida);
 }
 	
+
+ function Paciente(nombre,edad,peso){
+    this.nombre=nombre;
+    this.edad=edad;
+    this.peso=peso;
+  } 
 function libre(){
+  let nombrecapturado = document.getElementById("nombre").value;
+  let edadcapturado = document.getElementById("edad").value;
+  let pesocapturado = document.getElementById("peso").value;
+  
+  nuevoPaciente = new Paciente(nombrecapturado,edadcapturado,pesocapturado); 
+  
+ agregarPaciente(nuevoPaciente);
+}
+
+ 
+  function agregarPaciente(nuevo){
+  let datosPacientes = []; 
+  datosPacientes.push(nuevo);
+  
+  console.log(datosPacientes);
+
+  document.getElementById("tabla").innerHTML +='<tbody><td>'+ nuevo.nombre +'</td><td>'+nuevo.edad+'</td><td>'+nuevo.peso +'</td> </tbody>';
+  
+  }
+
+
+
+
+
+//codigo para darne una idea de los objetos
 /*
 var miAuto = new Object();
 miAuto.marca = "Ford";
 miAuto.modelo = "Mustang";
 miAuto.año = 1969;
 */
-
-
-
-
-
-	
-}
-
-
 
 /*
 
