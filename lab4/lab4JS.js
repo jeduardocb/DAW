@@ -1,23 +1,21 @@
 function generarTabla(){
 	var numero = prompt("dame un numero");
+   while(isNaN(numero)){
+    numero = prompt("Dame numeros");
+  }
+
 	var bandera = 1;
-//function genera_tabla(numero) {
-  // Obtener la referencia del elemento body
+
   var body = document.getElementsByTagName("body")[0];
  
-  // Crea un elemento <table> y un elemento <tbody>
   var tabla   = document.createElement("table");
   var tblBody = document.createElement("tbody");
  
-  // Crea las celdas
   for (let i = 1; i <= numero; i++) {
-    // Crea las hileras de la tabla
-    var hilera = document.createElement("tr");
+   
+    var filas = document.createElement("tr");
  
     for (let j = 1; j <= 3; j++) {
-      // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-      // texto sea el contenido de <td>, ubica el elemento <td> al final
-      // de la hilera de la tabla
       var celda = document.createElement("td");
       if(bandera == 1){
       	var textoCelda = document.createTextNode(i);	
@@ -26,24 +24,20 @@ function generarTabla(){
       }if(bandera == 3){
       	var textoCelda = document.createTextNode(Math.pow(i, 3) );	
       } 
-
-      
       celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
+      filas.appendChild(celda);
       bandera++;
     }
- 	bandera = 1;
-    // agrega la hilera al final de la tabla (al final del elemento tblbody)
-    tblBody.appendChild(hilera);
+  	bandera = 1;
+    
+    tblBody.appendChild(filas);
   }
  
-  // posiciona el <tbody> debajo del elemento <table>
   tabla.appendChild(tblBody);
-  // appends <table> into <body>
   body.appendChild(tabla);
-  // modifica el atributo "border" de la tabla y lo fija a "2";
-  tabla.setAttribute("border", "2");
-//}
+  
+  tabla.setAttribute("border", "3");
+
 
 }
 
@@ -68,16 +62,26 @@ function sumaNumeros(){
 
 }
 
-function contador(){
-	let arreglo = new Array(100);
+function generarArreglo(){
+  let arreglo = new Array(100);
+  let  numero = 0;
+
+  for(let i=0;i <100 ;i++){
+    numero = Math.floor(Math.random() * (100 - (-100)) + (-100));
+    arreglo[i]= numero;
+  }
+  return arreglo;
+}
+
+function contador(arreglo=generarArreglo()){
+	
 	let negativos=0;
 	let ceros=0;
 	let positivos = 0;
 	let  numero = 0;
 
 	for(let i=0;i <100 ;i++){
-		numero = Math.floor(Math.random() * (100 - (-100)) + (-100))
-		arreglo[i]= numero;
+		numero=arreglo[i];
 		if(numero<0){
 			negativos++;
 		}else if(numero>0){
@@ -91,18 +95,41 @@ function contador(){
 		+ "  los positivos son " +positivos +  "  los ceros son " + ceros);
 
 } 
-function promedios(){
 
-//preguntar al profesor
+
+
+function promedios(matriz){
+
+  let arregloPromedio =  [0,0,0,0];
+
+  for(let i = 0; i < 4; i++){
+    for( let j = 0; j < 4; j++){
+
+      arregloPromedio[i] = arregloPromedio[i]+ matriz[i][j];
+    }
+    arregloPromedio[i] =arregloPromedio[i] / 4;
+  }
+
+
+    document.write("posicion 0 =" + Math.floor(arregloPromedio[0]));
+    document.write("  posicion 1 =" + Math.floor(arregloPromedio[1]));
+    document.write("  posicion 2 =" + Math.floor(arregloPromedio[2]));
+    document.write("  posicion 3 =" + Math.floor(arregloPromedio[3]));
+
+  
 
 
 }
 
-function inverso(){
-  var cadena = prompt("Dame numeros");
+function pedirNumero(){
+var cadena = prompt("Dame numeros");
   while(isNaN(cadena)){
     cadena = prompt("Dame numeros");
   }
+  return cadena;
+}
+function inverso(cadena = pedirNumero()){
+  
   var x = cadena.length;
   var cadenaInvertida = "";
 
