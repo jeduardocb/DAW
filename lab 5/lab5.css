@@ -36,6 +36,9 @@ hr {
 img:hover {
   transform: scaleX(-1);
 }
+#referencias{
+	background-color: #C2C1FF;
+}
 
 #contrasena{
 	text-align: center;
