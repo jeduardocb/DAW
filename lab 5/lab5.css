@@ -1,0 +1,43 @@
+h1,h2{
+	text-align: center;
+}
+footer{
+	background-color: gray;
+	text-align: center;
+
+}
+header{
+	background-color: #FFC1C1;
+}
+table{
+	margin: auto;
+}
+#libre{
+	background-color: #FDC1FF;
+}
+#preguntas{
+	background-color: #C1FFFC;
+}
+#contrasena{
+	background-color: #CAFFC1;
+}
+#tienda{
+	text-align: center;
+	align-items: center;
+	background: #FFF8C1;
+
+}
+hr {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+    content: "\00a0";
+}
+img:hover {
+  transform: scaleX(-1);
+}
+
+#contrasena{
+	text-align: center;
+
+}

@@ -3,51 +3,183 @@
 <head>
 	<title>Laboratorio 5</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="lab5.css">
 </head>
 <body>
-	<h1>Validacion de passwords</h1>
+	<header>
+		<h1>Validacion de passwords</h1>
 
+		<hr>
 	
-	<p>Favor de introducir contrasena</p>
-	   
-	<p>Escribir contrasena</p>
-	<input type="password" id="contra1" size="20" placeholder="Constrasena"><br/>
 
-	<p>Verificar contrasena</p>
-	<input type="password" id="contra2" size="20" placeholder="Contrasena"><br/><br/>
+	</header>
+	
+	
+	<div id="contrasena">
+		<h2>Validador de contraseñas</h2>
+			
+		<p>Favor de introducir contraseña</p>
+		<p id="caracteres">Con un minimo de 8 caracteres</p>
+		<p id="mayuscula">Con una mayuscula</p>
+		<p id="numero">Con un numero </p>
+ 		   
+		<label>Escribir contraseña:</label>
+		<input type="password" id="contra1" size="20" placeholder="Constrasena"><br/>
+
+		<labe>Verificar contraseña:</label>
+		<input type="password" id="contra2" size="20" placeholder="Contrasena"><br/><br/>
 
 
-	<button type="button" onclick="validarAcceso()">Validar</button>
+		<button type="button" onclick="validarAcceso()">Validar</button>
 
-	<br><br><br>
-	<div class="container">
-    	<div class="row">
-        
-        <main id="items" class="col-sm-8 row"></main>
-        
-        <aside class="col-sm-4">
-            <h2>Tus articulos son:</h2>
-            
-            <ul id="carrito" class="list-group"></ul>
-            <hr>
-            
-            <p class="text-right">Total: <span id="total"></span>$;</p>
-        </aside>
-   		</div>
+
 	</div>
 	
 
+	<hr>
+	<div id="tienda">
+	<h2>Tienda de Ropa</h2>
+	
+	<table>
+		<tr>
+			<th>
+				<label> Chamarra:</label>
+	<label> $500 </label>
+	<button name="button" onclick="agregar_chamarra()">Agregar</button>
+	<br>
+	<img src="https://store.tec.mx/6596-large_default/chamarra-universitaria-tec-borregos.jpg" alt="Foto de Chamarra" />
+	</th>
+			<th>
+				<label> Sudadera</label>
+	<label> $400 </label>
+	<button name="button" onclick="agregar_sudadera()">Agregar</button>
+	<br>
+	<img src="https://store.tec.mx/6541-large_default/sudadera-tec-hf17001.jpg">
+
+	
+			</th>
+			<th>
+				<label> Chaleco</label>
+	<label> $300 </label>
+	<button name="button" onclick="agregar_chaleco()">Agregar</button>
+	<br>
+	<img src="https://store.tec.mx/6950-large_default/chaleco-egade-para-hombre.jpg">
+
+	
+			</th>
+		</tr>
+	</table>
+	
+
+
+	
+
+	<table id="tabla">
+		<thead>
+			<tr>
+				<th>Articulos</th>
+				<th>Precio</th>
+				<th>IVA</th>
+			</tr>
+		</thead>
+	</table>
 
 
 
-	<p>Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password. Utiliza al máximo tu creatividad e ingeniería para que la página sea un validador de passwords de estado del arte, con la mejor experiencia para el usuario.
-Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para vender 3 productos de tu interés, con los precios y promociones a tu gusto. La página debe permitir al usuario escoger la cantidad de unidades de cada producto, y debe mostrar el precio total, el IVA que se está cargando, y toda la información que consideres pertinente para que la experiencia del usuario sea la mejor. La página debe validar los rangos de las unidades de cada producto.
-Con JavaScript y HTML5 y CSS, desarrolla una página con alguna temática o problema de tu interés. La página debe contener una forma y debes realizar las validaciones necesarias. Después de validar la forma, la página debe desplegar información relacionada con los datos introducidos en la forma, es decir la solución del problema o información respectiva a los datos introducidos.</p>
+	<p>Total:<strong id="total"></strong> </p>  
+	
+	</div>
+	
+	<div id="libre">
+		<hr>
+		<p>En este laboratorio libre es un tipo examen diagnostico para alumnos de primaria, este constara de 5 preguntas, de matematicas, de historia, y de español, al oprimir el boton de verificar este te mandara un mensaje de cuantos aciertos obtuvo el alumno</p>
 
-	<p>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?
-¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
-Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</p>
+		<label>¿En que fecha inició la revolucion mexicana?</label>
+		<select id="revolucion">
+			<option >Elige</option>
 
+			<option >1910</option>
+
+			<option >1920</option>
+
+			<option >1810</option>
+
+		</select>
+		<br>
+		<label>¿Cuanto es (5 * 6) / 3?</label>
+		<select id="multiplicacion">
+			<option >Elige</option>
+
+			<option >10</option>
+
+			<option >20</option>
+
+			<option >12</option>
+
+		</select>
+		<br>
+		<label> ¿Cuál es la sílaba tónica de la palabra amanecer?</label>
+		<select id="silaba">
+			<option >Elige</option>
+
+			<option >ne</option>
+
+			<option >ma</option>
+
+			<option >cer</option>
+
+		</select>
+
+
+		<br>
+		<label> Si tengo 20 manzanas y le doy a mi mejor amigo el 25% de ellas. ¿Cuántas manzanas le he dado?</label>
+		<select id="manzanas">
+			<option >Elige</option>
+
+			<option >0</option>
+
+			<option >15</option>
+
+			<option >5</option>
+
+		</select>
+
+		<br>
+
+		<label>¿Cuántos estados tiene México? </label>
+		<select id="estados">
+			<option >Elige</option>
+
+			<option >26</option>
+
+			<option >35</option>
+
+			<option >32</option>
+
+		</select>
+		<br>
+		<button onclick="verificar()"> Verificar</button>
+	</div>
+	
+
+	<div id="preguntas">
+		<hr>
+		<p>
+			¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? 
+			<br>
+			Para no generar errores dentro de la pagina.
+		</p>
+
+		<p>
+			¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
+			quitando el atributo on submit
+		</p>
+		
+		<p>
+			Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?
+
+		</p>
+	</div>
 
 
 
