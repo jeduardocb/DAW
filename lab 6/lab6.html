@@ -6,28 +6,67 @@
 </head>
 <body>	
 	<header>
-		<h1>Laboratorio 6</h1>
+		<h1 id="titulo">Laboratorio 6</h1>
 	</header>
+	<hr>
+	<div  >
+		<p onmouseover="hacer_over()" id="puntero">Pasa el puntero sobre este texto o la imagen </p>
+		<img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png"  id="imagen1" ononmouseover="hacer_over()" width="100" height="50">
+		<br><br><br>
+	</div>
+	<hr>
+
+	<div name="instrucciones">
+		<p>Arrastra cada imagen a su lugar correspondiente</p>
+	</div>
+
+	<div name="imagenes">
+		<img src="https://www.infobae.com/new-resizer/ehc9ShbXRdQUtT9YVvS01uZRBDw=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/10/11180720/raton-sexo.jpg" draggable="true" ondragstart="drag(event)" id="raton" width="150" height="150">
+
+		<img src="https://img2.freepng.es/20190415/oxt/kisspng-giraffe-portable-network-graphics-clip-art-image-t-download-free-png-giraffe-dlpng-com-5cb53b1c29d198.9146637715553810201713.jpg" draggable="true" ondragstart="drag(event)" id="jirafa" width="150" height="150">
+
+		<img src="https://img.lovepik.com/original_origin_pic/18/12/17/66e65b02e25dbd9abdaf6a4d71bd88c2.png_wh860.png" draggable="true" ondragstart="drag(event)" id="gato" width="150" height="150">
+
+		<img src="https://clinicaanoeta.com/wp-content/uploads/2019/10/color-lengua-perros-700x350.png" draggable="true" ondragstart="drag(event)" id="perro" width="150" height="150">
+
+		<img src="https://img1.freepng.es/20171221/roe/little-elephant-png-clipart-image-5a3b72454d6948.3012332915138453173171.jpg" draggable="true" ondragstart="drag(event)" id="elefante" width="150" height="150">
+	</div>
+	
+
+
+	
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+ 		<p>Perro</p>
+	</div>
+	
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<p>Gato</p>
+	</div>
+
+	
+	<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<p>Elefante</p>
+	</div>
+
+	
+	<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<p>Jirafa</p>
+	</div>
+
+	
+	<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<p>Raton</p>
+	</div>
 
 
 
 
-<div class="a">This div element has position: relative;
-  <div class="b">This div element has position: absolute and top: -20px.</div>
-</div>
-
-<div class="c">This div element has no parent element, has position: absolute and is placed 150 pixels down from the top of the document body.</div>
-	<br><br><br>
-
-	A partir de un documento o sitio de los que entregaste previamente (o si lo prefieres elabora uno nuevo), agrega las siguientes características:
-Usando texto con estilos o alguna imagen, crea una marca de agua para tu documento HTML.
-Cambia el estilo de las letras de alguna parte del documento con eventos diferentes a onClic. 
-Para los campos de una forma, o para algún texto corto del documento, haz que de manera dinámica aparezca ayuda o información relevante o complementaria. Usa tu creatividad.
-Investiga y prueba las funciones setInterval y setTimeout de JavaScript. De alguna manera incorpora una de ellas en el documento para agregarle una nueva característica al sitio.
-Afortunadamente drag-and-drop ahora es parte del estándar HTML5 :) Utilizando como referencia el siguiente tutorial, incorpora esta característica a tu documento: http://www.w3schools.com/html/html5_draganddrop.asp
+	<hr>
 
 
-	<div name="preguntas">
+	<img src="https://vignette.wikia.nocookie.net/memes-pedia/images/b/b7/Ola_k_ase.jpg/revision/latest/top-crop/width/360/height/450?cb=20160227193105&path-prefix=es"  id="hola" width="1" height="1">
+	<div name="preguntas" id="preguntas">
+		<h2>Preguntas</h2>
 		<p>
 			¿Cuáles son las diferencias entre los posibles valores de la propiedad position?
 			<ol type="A">
@@ -51,14 +90,25 @@ Afortunadamente drag-and-drop ahora es parte del estándar HTML5 :) Utilizando c
 
 		<p>
 			¿Qué es el zIndex y para qué sirve?
+			<br>
+			indica el z-order de un elemento y sus descendientes. Cuando varios elementos se superponen, z-order determina cuales cubren a otros. Un elemento con mayor z-index generalmente cubre a otro menor.
+
 		</p>
 
 	</div>
 	<div name="referencias">
 		<a href="https://dzone.com/articles/css-position-relative-vs-position-absolute">https://dzone.com/articles/css-position-relative-vs-position-absolute</a>
-		<a href=""></a>
+		<a href="https://developer.mozilla.org/es/docs/Web/CSS/z-index">https://developer.mozilla.org/es/docs/Web/CSS/z-index</a>
 		
 	</div>
+
+	<footer>
+		<p>
+			Jose Eduardo Cadena Bernal
+			<br>
+			A01704641@itesm.mx
+		</p>
+	</footer>
 	<script type="text/javascript" src="lab6.js"></script>
 </body>
 </html>

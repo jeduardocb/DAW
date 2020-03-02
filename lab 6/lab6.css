@@ -1,10 +1,18 @@
 body {
   font-size: 16px;
+  max-width: 80em;
+  margin: 0 auto;
 }
+#puntero{
+  background-color: red;
+}
+  /*Al igual que los comentarios condicionales que se han venido usando específicamente para Microsoft Internet Explorer, los prefijos son un tipo de filtro que permite que una instrucción CSS se aplique específicamente a un navegador o familia de navegadores pero no a los demás. Sin embargo, a diferencia de los comentarios condicionales, existen prefijos específicos para todos los tipos de navegador. A continuación se indican los prefijos más habituales y seguidamente pasaremos a ver un ejemplo.
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=761:prefijos-css-de-navegador-chrome-firefox-iexplorer-opera-safari-webkit-moz-ms-o-ejemplos-cu01056d&catid=75&Itemid=203
+  */
 body:after {
   content: "Eduardo"; 
   font-size: 15em;  
-  color: rgba(52, 166, 214, 0.4);
+  color: rgba(241, 105, 146, 0.4);
   z-index: 9999;
  
   display: flex;
@@ -15,7 +23,7 @@ body:after {
   right: 0;
   bottom: 0;
   left: 0;
-    
+
   -webkit-pointer-events: none;
   -moz-pointer-events: none;
   -ms-pointer-events: none;
@@ -27,4 +35,27 @@ body:after {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+hr {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+    content: "\00a0";
+}
+footer{
+  text-align: center;
+  background-color: gray;
+}
+
+#div1,#div2,#div3,#div4,#div5 {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#hola{
+  visibility: hidden;
 }
