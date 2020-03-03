@@ -7,6 +7,11 @@ function setAlign() {
   titulo.style.textAlign  = titulo.style.textAlign  == "left" ? "right" : "left";
   
 }
+//cambiar visibilidada cuando pida ayuda
+function ayuda(){
+  let ayuda= document.getElementById("oculto");
+  ayuda.style.visibility = "visible";
+}
 //cuando se haga un mouseover alertar y poner un timeout para que cambie a negro
 
 
@@ -34,14 +39,15 @@ function hacer_over(){
 }
 
 /*--------------drag and drop -----------*/
+//permitir
 function allowDrop(ev) {
   ev.preventDefault();
 }
-
+//agarrar
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
-
+//soltar
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
