@@ -102,8 +102,8 @@
 
 	function Generar_Tabla($numero){
 		$bandera=1;
-		echo "<table border=1>";
-		for($i=0; $i<$numero; $i++){
+		echo "<table border=1 class='striped' >";
+		for($i=1; $i<$numero; $i++){
 			 echo "<tr>";
 			    echo "<td>".$i."</td>";
 
@@ -114,12 +114,12 @@
 			  echo "</tr>";
 		  
 	     }
-	     echo "</table>";
+	     echo "</table> <br>";
 
 	}
 
 	echo "Una función que imprima una tabla html, que muestre los cuadrados y cubos de 1 hasta un número n<br><br>";
-	Generar_Tabla(100);
+	Generar_Tabla(15);
 	Generar_Tabla(5);
 
 
