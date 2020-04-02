@@ -16,23 +16,30 @@
 	}
 //@param $lugar: El lugar de donde proviene el caso
   //@param $estado: El estado de la infección del caso
-  function consultar_casos($nombre_Cancion="", $nombre_Genero="") {
+  function consultar_casos($id_Autor="", $nombre_Genero="") {
     $conexion_bd = conectar_bd();  
     
-    $resultado =  "<table><thead><tr><th>Nombre</th><th>Genero</th></tr></thead>";
+    $resultado =  "<table><thead><tr><th>Numero de cancion</th><th>Nombre</th><th>Autor</th><th>Genero</th></tr></thead>";
     
-    $consulta = 'Select nombre_Cancion, nombre_Genero From cancion ';
-   if ($nombre_Cancion != "") {
-        $consulta .= " AND nombre_Cancion=".$nombre_Cancion;
+    $consulta = 'Select id_Cancion,nombre_Cancion, nombre_Genero,a.nombre
+     From cancion as c,autor as a 
+     where c.id_Autor=a.id_Autor';
+   if ($id_Autor != "") {
+        $consulta .= " AND c.id_Autor=".$id_Autor;
+        echo "<br>la consulta es:".$consulta;
     }
     if ($nombre_Genero != "") {
-        $consulta .= " AND nombre_Genero=".$nombre_Genero;
+        $consulta .= " AND c.nombre_Genero='".$nombre_Genero ."'";
+        echo "<br>la consulta es:".$consulta;
     } 
     $resultados = $conexion_bd->query($consulta);  
     while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
         $resultado .= "<tr>";
-        $resultado .= "<td>".$row['nombre_Cancion']."</td>"; 
+        $resultado .= "<td>".$row['id_Cancion']."</td>"; 
+        $resultado .= "<td>".$row['nombre_Cancion']."</td>";
+         $resultado .= "<td>".$row['nombre']."</td>";  
         $resultado .= "<td>".$row['nombre_Genero']."</td>"; 
+       
         $resultado .= "</tr>";
     }
     
@@ -44,7 +51,7 @@
     return $resultado;
   }
 
-  //Crea un select con los datos de una consulta
+      //Crea un select con los datos de una consulta
   //@param $id: Campo en una tabla que contiene el id
   //@param $columna_descripcion: Columna de una tabla con una descripción
   //@param $tabla: La tabla a consultar en la bd
@@ -53,10 +60,9 @@
       
     $resultado = '<div class="input-field"><select name="'.$tabla.'"><option value="" disabled selected>Selecciona una opción</option>';
             
-    $consulta = "SELECT $id, $columna_descripcion FROM $tabla";
+    $consulta = "SELECT $id  , $columna_descripcion  FROM $tabla";
     $resultados = $conexion_bd->query($consulta);
     while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
-    	echo "<h5>jajaj</h5>";
        $resultado .= '<option value="'.$row["$id"].'">'.$row["$columna_descripcion"].'</option>';
     }
         
