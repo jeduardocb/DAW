@@ -26,18 +26,18 @@
      where c.id_Autor=a.id_Autor';
    if ($id_Autor != "") {
         $consulta .= " AND c.id_Autor=".$id_Autor;
-        echo "<br>la consulta es:".$consulta;
+        //echo "<br>la consulta es:".$consulta;
     }
     if ($nombre_Genero != "") {
         $consulta .= " AND c.nombre_Genero='".$nombre_Genero ."'";
-        echo "<br>la consulta es:".$consulta;
+        //echo "<br>la consulta es:".$consulta;
     } 
     $resultados = $conexion_bd->query($consulta);  
     while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
         $resultado .= "<tr>";
         $resultado .= "<td>".$row['id_Cancion']."</td>"; 
         $resultado .= "<td>".$row['nombre_Cancion']."</td>";
-         $resultado .= "<td>".$row['nombre']."</td>";  
+        $resultado .= "<td>".$row['nombre']."</td>";  
         $resultado .= "<td>".$row['nombre_Genero']."</td>"; 
        
         $resultado .= "</tr>";

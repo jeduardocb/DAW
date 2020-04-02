@@ -8,14 +8,14 @@
 
 	  if (isset($_POST["autor"])) {
 	      $autor = htmlspecialchars($_POST["autor"]);
-	      echo $_POST["autor"];
+	      //echo $_POST["autor"];
 	  } else {
 	      $autor = "";
 	  }
 
 	 if (isset($_POST["genero"])) {
 	      $nombre_Genero = htmlspecialchars($_POST["genero"]);
-	      echo $_POST["genero"];
+	      //echo $_POST["genero"];
 	  } else {
 	      $nombre_Genero = "";
 	  }
