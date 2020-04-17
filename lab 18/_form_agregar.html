@@ -1,0 +1,10 @@
+ 
+<form method="POST" action="controlador_insertar_cancion.php">
+    <?=crear_select("nombre_Genero", "nombre_Genero", "genero");?>
+    <?=crear_select("id_Autor", "nombre", "autor");?>
+
+    <label class="active" for="nombre">Nombre de la cancion</label>
+    <input placeholder="Eduardo Cadena" id="nombre" name="nombre" type="text" class="validate">
+     
+    <input class="waves-effect waves-light btn" type="submit" value="Agregar">
+</form>
