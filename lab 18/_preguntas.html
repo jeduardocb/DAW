@@ -3,25 +3,33 @@
     <h3>Preguntas</h3>
     <p><u> ¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?</u>
     	<br>
-    	 respuesta
+    	Asynchronous JavaScript and XML permite la creación de aplicaciones web que funcionen de forma asíncrona( que procesen cualquier solicitud de servidor en segundo plano lo que hace posible el envío y obtención de datos de servidor sin necesidad de cargar toda la página web) ofreciendo una mejor experiencia visual y mayor interactividad. 
+    	 
     </p>
-	<p><u> ¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</u> 
+	<p><u> ¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?	</u> 
 		<br>
-		respuesta
-		<br>
-		<ul>
-			<li>Convierte siempre el valor a su tipo correspondiente</li>
-			<li>Parametrizar las consultas SQL</li>
-			<li>Usar una cuenta con permisos restringidos a la base de datos</li>
-			<li>No mostrar al usuario la información de error generada por la base de datos</li>
-			<li>Rechazar las peticiones con caractéres sospechosos</li>
-		</ul>
-	</p>
+		El desarrollo de aplicaciones AJAX hace más vulnerables a las mismas por las tecnologías en las que se basa y su diseño. Se dice que en una aplicación como esta parte de la lógica se mueve del servidor al cliente, potencializando los riesgos, tales como: Datos corruptos, acceso sin autorización, datos malformados y mal rendimiento.
 
-	<p> <u>¿Qué es JSON?</u>
-	<br>
-	 respuesta </p>
+		En el entorno de una aplicación cliente-servidor los datos deben de ser considerados desde un principio como no confiables y se deben tener en cuenta los ataques de sql injection y el cross-scripting, es por eso que las validaciones del lado del servidor son un must para conservar la seguridad de los datos y la aplicación en general, mientras que las validaciones del lado del cliente usualmente se utilizan con el propósito de ofrecer una mejor experiencia al usuario. 
+		
+	</p>
+	<p><u>¿Qué es JSON?	</u> 
+		<br>
+		JavaScript Object Notation es un formato ligero para la serialización de datos estructurados lo cual lo hace ideal para usar con API, REST y AJAX. Deriva de los Objetos Literales de Javascript y puede representar cuatro tipos primitivos(strings, números, booleanos y valores nulos), así como dos tipos estructurados(objetos y arreglos). JSON se ha convertido en un reemplazo de XML gracias a su similitud con JavaScript. 
+
+		
+	</p>
+  </div>
+<div class="divider"></div>
+  <div class="section">
+    <h3>Referencias</h3>
+   
+  		<ul>
+			<li><a href="http://exa.unne.edu.ar/informatica/SO/TFLino.pdf">http://exa.unne.edu.ar/informatica/SO/TFLino.pdf</a> </li>
+			<li><a href="https://uniwebsidad.com/libros/ajax/capitulo-7/seguridad">https://uniwebsidad.com/libros/ajax/capitulo-7/seguridad</a> </li>
+			<li><a href="https://www.json.org/json-es.html">https://www.json.org/json-es.html</a> </li>
+			
+			
+		</ul>
 	
   </div>
-
-

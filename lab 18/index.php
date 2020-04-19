@@ -21,7 +21,12 @@
 	      $nombre_Genero = "";
 	  }
 
+	
+	echo '<div id="resultados_consulta">';
 	echo consultar_casos($autor,$nombre_Genero);
+
+	//echo consultar($id_Autor,$nombre_Genero);
+	echo '</div>';
 	include("_preguntas.html"); 
 	include("_footer.html"); 
 
