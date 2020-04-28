@@ -1,0 +1,45 @@
+
+
+ 	 <div class="row">
+      <div class="col s12">
+      	<p> ¿Por qué es importante hacer un session_unset() y luego un session_destroy()?
+      		<br>
+      		session_unset(): para liberar todas las variables de sesión registradas actualmente.
+      		<br>
+      		session_destroy():para destruir toda la información registrada de una sesión
+      	</p>
+1
+		<p> ¿Cuál es la diferencia entre una variable de sesión y una cookie?
+			<br>
+			Cookies
+			Una cookie es un fragmento de información que un navegador web almacena en el disco duro del visitante a una página web. La información se almacena a petición del servidor web, ya sea directamente desde la propia página web con JavaScript o desde el servidor web mediante las cabeceras HTTP, que pueden ser generadas desde un lenguaje de web scripting como PHP. La información almacenada en una cookie puede ser recuperada por el servidor web en posteriores visitas a la misma página web.
+			<br>
+			Una sesión es un mecanismo de programación de las tecnologías de web scripting que permite conservar información sobre un usuario al pasar de una página a otra. A diferencia de una cookie, los datos asociados a una sesión se almacenan en el servidor y nunca en el cliente.
+
+			En la mayoría de las tecnologías de web scripting, las sesiones se implementan mediante una cookie que almacena un valor que identifica al usuario en el servidor web cada vez que pasa de una página web a otra. En el servidor web están almacenados todos los datos de la sesión y se accede a ellos cada vez que se pasa de página gracias al identificador almacenado en la cookie.
+		</p>
+
+
+		<p>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?
+			<br>
+			Utilizando el método move() de File, este permite que cuando un archivo se sube con el mismo nombre , este metodo lo sobreescribe inmediatamente
+		</p>
+		<p>¿Qué es CSRF y cómo puede prevenirse?
+			<br>
+			Cross Site Request Forgery: La técnica llamada falsificación de petición en sitios cruzados, proviene de su nombre en inglés Cross Site Request Forgery (CSRF o XSRF). Este ataque fuerza al navegador web de su víctima, validado en algún servicio (como por ejemplo correo o home banking) a enviar una petición a una aplicación web vulnerable.
+
+			<br>
+			Configurar el navegador para que no recuerde usuarios y contraseñas. El modo incógnito es una buena alternativa (Ctrl+Shift+P).
+			Recordar cerrar la sesión cuando ya no se vaya a hacer uso de la aplicación y/o servicio.
+			Se recomienda no utilizar la funcionalidad de aplicaciones web que permiten mantener la sesión abierta o recordar sesión.
+			Utilizar diferentes navegadores, uno para información sensible y otro para navegación en general.
+			Utilizar complementos que bloqueen la ejecución de scripts. Así los formularios que se envíen por el metodo POST, no podrán ser enviados automáticamente sin el consentimiento del usuario.
+		</p>
+
+
+
+
+
+      </div>
+    </div> 
+ 
