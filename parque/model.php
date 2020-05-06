@@ -142,7 +142,7 @@
          
          //Prepara la consulta
          
-        $dml = 'INSERT INTO tiene (id_lugar,id_tipo) VALUES (?,?)';
+        $dml = 'CALL agregaEstado  (?,?)';
         
         if ( !($statement = $conexion_bd->prepare($dml)) ) {
             die("Error: (" . $conexion_bd->errno . ") " . $conexion_bd->error);
